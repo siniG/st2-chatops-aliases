@@ -6,12 +6,13 @@ action_ref: "ansible.playbook"
 description: "Run Ansible playbook"
 parameters:
   module_path: /opt/stackstorm/packs/st2-chatops-aliases/shipit/modules
-  inventory_file: /opt/stackstorm/packs/st2-chatops-aliases/shipit/inventory
+  inventory_file: /opt/stackstorm/packs/st2-chatops-aliases/shipit/inventory/hosts
+  playbook:  /opt/stackstorm/packs/st2-chatops-aliases/shipit/playbooks/{{ run_playbook }}.yaml
   
 formats:
   - display: "playbook <command>"
     representation:
-      - "playbook {{ args }}"
+      - "playbook {{ run_playbook  }}"
 result:
   format: |
     Ansible command `{{ execution.parameters.args }}` result: {~}
