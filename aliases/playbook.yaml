@@ -13,7 +13,7 @@ parameters:
 formats:
   - display: "playbook <command>"
     representation:
-      - "playbook {{ args }}"
+      - "playbook"
 result:
   format: |
     Ansible command `{{ execution.parameters.args }}` result: {~}
