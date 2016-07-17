@@ -7,7 +7,7 @@ description: "Run Ansible playbook"
 formats:
   - display: "playbook <command>"
     representation:
-      - "ansible {{ args }}"
+      - "playbook {{ args }}"
 result:
   format: |
     Ansible command `{{ execution.parameters.args }}` result: {~}
