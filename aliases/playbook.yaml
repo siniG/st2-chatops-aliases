@@ -7,12 +7,13 @@ description: "Run Ansible playbook"
 parameters:
   module_path: /opt/stackstorm/packs/st2-chatops-aliases/shipit/modules
   inventory_file: /opt/stackstorm/packs/st2-chatops-aliases/shipit/inventory/hosts
-  playbook:  /opt/stackstorm/packs/st2-chatops-aliases/shipit/playbooks/test.yaml
+  playbook: /opt/stackstorm/packs/st2-chatops-aliases/shipit/playbooks/test.yaml
+  sudo: True
   
 formats:
   - display: "playbook <command>"
     representation:
-      - "playbook {{ run_playbook  }}"
+      - "playbook {{ args }}"
 result:
   format: |
     Ansible command `{{ execution.parameters.args }}` result: {~}
