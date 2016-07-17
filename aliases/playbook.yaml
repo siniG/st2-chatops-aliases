@@ -4,6 +4,10 @@
 name: "chatops.playbook"
 action_ref: "ansible.playbook"
 description: "Run Ansible playbook"
+parameters:
+  module_path: /opt/stackstorm/packs/st2-chatops-aliases/shipit/modules
+  inventory_file: /opt/stackstorm/packs/st2-chatops-aliases/shipit/inventory
+  
 formats:
   - display: "playbook <command>"
     representation:
