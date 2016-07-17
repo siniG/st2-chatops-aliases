@@ -1,11 +1,11 @@
 # refers to `ansible` st2 integration pack:
 # https://github.com/StackStorm/st2contrib/tree/master/packs/ansible
 ---
-name: "chatops.ansible_local"
-action_ref: "ansible.command_local"
-description: "Run Ansible command on local machine"
+name: "chatops.ansible_playbook"
+action_ref: "ansible.playbook"
+description: "Run Ansible playbook"
 formats:
-  - display: "ansible <command>"
+  - display: "playbook <command>"
     representation:
       - "ansible {{ args }}"
 result:
